@@ -11,12 +11,16 @@ Bienvenue dans ce dépôt GitHub dédié à l'apprentissage de la programmation 
 ## 🚀 Démarrage
 
 1. **Cloner ce dépôt** :
-
+   
+```bash 
 git clone https://github.com/[votre_nom_utilisateur]/poo-python.git
+```
 
 2. **Naviguer dans le dossier** :
 
-cd poo-python
+```bash 
+cd oop
+```
 
 3. **Ouvrir le notebook d'explication** :
 Si vous avez Jupyter Notebook installé :
