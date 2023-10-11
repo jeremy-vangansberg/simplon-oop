@@ -1,6 +1,6 @@
-exercices/
-app2/
-app1_geometry_game/
+# exercices/
+# app2/
+# app1_geometry_game/
 # Created by https://www.toptal.com/developers/gitignore/api/python,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,macos
 .conda
