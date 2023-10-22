@@ -1,4 +1,5 @@
 from random import randint
+import turtle
 
 
 class Point:
@@ -28,9 +29,42 @@ class Rectangle:
                (self.point2.y - self.point1.y)
 
 
+# myturtle = turtle.Turtle()
+
+
+class GraphicalRectangle(Rectangle):
+
+    def draw(self, canvas):
+        canvas.penup()
+        # Le point (0,0) c'est le centre du canves
+        canvas.goto(self.point1.x, self.point1.y)
+        canvas.pendown()
+
+        largeur = self.point2.x - self.point1.x
+        hauteur = self.point2.y - self.point1.y
+        # Dessin d'un rectangle
+        canvas.forward(largeur)
+        canvas.left(90)
+        canvas.forward(hauteur)
+        canvas.left(90)
+        canvas.forward(largeur)
+        canvas.left(90)
+        canvas.forward(hauteur)
+
+
+class GraphicalPoint(Point):
+    def draw(self, canvas, size=5):
+        canvas.penup()
+        # Le point (0,0) c'est le centre du canves
+        canvas.goto(self.x, self.y)
+        canvas.pendown()
+        canvas.dot(size=size)
+
+
 # Create rectangle object
-rectangle = Rectangle(Point(randint(0, 9), randint(0, 9)),
-                      Point(randint(10, 19), randint(10, 19)))
+rectangle = GraphicalRectangle(Point(randint(0, 400), randint(0, 400)),
+                               Point(randint(10, 400), randint(10, 400)))
+
 
 # Print rectangle coordinates
 print("Rectangle Coordinates: ",
@@ -40,10 +74,16 @@ print("Rectangle Coordinates: ",
       rectangle.point2.y)
 
 # Get point and area from user
-user_point = Point(float(input("Guess x: ")), float(input("Guess y: ")))
+user_point = GraphicalPoint(
+    float(input("Guess x: ")), float(input("Guess y: ")))
 user_area = float(input("Guess rectangle area: "))
 
 # Print out the game result
 print("Your point was inside rectangle: ",
       user_point.falls_in_rectangle(rectangle))
 print("Your area was off by: ", rectangle.area() - user_area)
+
+myturtle = turtle.Turtle()
+rectangle.draw(canvas=myturtle)
+user_point.draw(canvas=myturtle)
+turtle.done()

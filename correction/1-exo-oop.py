@@ -20,3 +20,14 @@ class Paint:  # 2
         else:
             total = self.buckets * 2.19
         return total
+
+
+class DiscountedPaint(Paint):  # 5
+    def discounted_price(self, discount_percentage):
+        discount_amount = self.total_price() * discount_percentage
+        return self.total_price() - discount_amount
+
+    # def discounted_price(self, discount_percentage):
+    #     price = self.total_price()
+    #     discount = price * discount_percentage / 100
+    #     return price - discount
