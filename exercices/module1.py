@@ -1,7 +1,8 @@
 def fonction():
     print("Fonction du module1")
 
-fonction()
+# fonction()
 
-# if __name__ == "__main__":
-#     fonction()
+
+if __name__ == "__main__":
+    fonction()

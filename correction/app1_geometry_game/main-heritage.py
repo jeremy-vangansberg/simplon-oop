@@ -15,6 +15,11 @@ class Point:
         else:
             return False
 
+    def distance_from_point(self, point):
+        x = point.x
+        y = point.y
+        return ((self.x - x)**2 + (self.y - y)**2)**(1/2)
+
 
 class Rectangle:
 
