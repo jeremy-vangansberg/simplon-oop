@@ -42,7 +42,3 @@ jupyter notebook POO_Explication.ipynb
 ## 🤝 Contribution
 
 N'hésitez pas à contribuer à ce dépôt en proposant des améliorations, des corrections ou de nouveaux exercices. Assurez-vous de suivre les directives de contribution.
-
-## 📜 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENCE](LICENCE) pour plus de détails.
